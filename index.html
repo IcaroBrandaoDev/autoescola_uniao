@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoescola União Sevilha | CNH em Ribeirão das Neves, MG</title>
+  <meta name="description" content="Autoescola União Sevilha, em Ribeirão das Neves. 1ª habilitação, adição de categoria, renovação de CNH e aulas para quem tem medo de dirigir. Fale no WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- JSON-LD: dados estruturados da autoescola para SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DrivingSchool",
+    "name": "Autoescola União Sevilha",
+    "telephone": "+55-31-3625-2542",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Monte Carmelo, 394",
+      "addressLocality": "Ribeirão das Neves",
+      "addressRegion": "MG",
+      "postalCode": "33858-080",
+      "addressCountry": "BR"
+    },
+    "areaServed": [
+      "Sevilha", "Justinópolis", "Veneza", "Rosaneves",
+      "Novo Eldorado", "Sapucaia", "Centro", "Ribeirão das Neves"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "12:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "33"
+    }
+  }
+  </script>
+  <!-- "url" e "image" ficam de fora até o domínio final do site ser definido -->
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <!-- Número de WhatsApp centralizado em assets/js/main.js (WHATSAPP_NUMBER). Os hrefs abaixo são fallback para navegação sem JS. -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Autoescola União Sevilha - Início">
+        <img src="assets/img/logo/logo-original.png" alt="Autoescola União Sevilha, Ribeirão das Neves MG" class="logo__image">
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#hero" class="nav__link">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Categoria A/B</a></li>
+          <li><a href="#aprovados" class="nav__link">Depoimentos</a></li>
+          <li><a href="#faq" class="nav__link">Dúvidas</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+553136252542" class="header__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4.5 4.5c-.6 3.5.9 8.9 4 12s8.5 4.6 12 4l.7-3.1a1.2 1.2 0 0 0-.8-1.4l-3.4-1.1a1.2 1.2 0 0 0-1.3.4l-1 1.3a10 10 0 0 1-5.7-5.7l1.3-1a1.2 1.2 0 0 0 .4-1.3L9.1 4.8a1.2 1.2 0 0 0-1.4-.8L4.5 4.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          (31) 3625-2542
+        </a>
+        <a
+          href="https://wa.me/553136252542"
+          data-wa-msg="Olá! Vim pelo site da Autoescola União Sevilha e quero falar sobre a CNH."
+          class="btn btn--whatsapp btn--sm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="icon-whatsapp" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.003 3C9.373 3 4 8.373 4 15.003c0 2.65.863 5.1 2.324 7.086L4.6 28.5l6.59-1.687a11.9 11.9 0 0 0 4.813 1.017h.004c6.63 0 12.003-5.373 12.003-12.003C28.01 8.373 22.637 3 16.003 3zm0 21.828a9.8 9.8 0 0 1-5.001-1.37l-.359-.213-3.912 1.002 1.045-3.815-.234-.392a9.79 9.79 0 0 1-1.5-5.237c0-5.42 4.411-9.83 9.833-9.83 5.42 0 9.83 4.41 9.83 9.83 0 5.421-4.41 9.83-9.702 9.825zm5.386-7.354c-.294-.147-1.741-.859-2.011-.957-.27-.098-.467-.147-.663.147-.196.294-.76.957-.932 1.153-.171.196-.343.22-.637.073-.294-.147-1.242-.458-2.365-1.462-.874-.78-1.464-1.744-1.636-2.038-.171-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.171.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.6-.909-2.19-.24-.575-.484-.497-.663-.506-.171-.008-.367-.01-.564-.01a1.08 1.08 0 0 0-.784.367c-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.055 2.846 1.202 3.043.147.196 2.077 3.17 5.032 4.445.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.085 1.741-.712 1.987-1.4.245-.688.245-1.278.171-1.4-.073-.122-.27-.196-.564-.343z"/></svg>
+          WhatsApp
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge">Ribeirão das Neves &middot; MG</span>
+          <h1 class="hero__title">
+            Sua CNH começa aqui, em <span class="text-accent">Sevilha</span>
+          </h1>
+          <p class="hero__subtitle">
+            Aulas de carro e moto com instrutor que explica cada etapa, sem enrolação.
+            Você entende o processo do começo ao fim.
+          </p>
+          <div class="hero__cta">
+            <a
+              href="https://wa.me/553136252542"
+              data-wa-msg="Olá! Vi o site da Autoescola União Sevilha e quero começar minha CNH."
+              class="btn btn--whatsapp btn--lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon-whatsapp" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.003 3C9.373 3 4 8.373 4 15.003c0 2.65.863 5.1 2.324 7.086L4.6 28.5l6.59-1.687a11.9 11.9 0 0 0 4.813 1.017h.004c6.63 0 12.003-5.373 12.003-12.003C28.01 8.373 22.637 3 16.003 3zm0 21.828a9.8 9.8 0 0 1-5.001-1.37l-.359-.213-3.912 1.002 1.045-3.815-.234-.392a9.79 9.79 0 0 1-1.5-5.237c0-5.42 4.411-9.83 9.833-9.83 5.42 0 9.83 4.41 9.83 9.83 0 5.421-4.41 9.83-9.702 9.825zm5.386-7.354c-.294-.147-1.741-.859-2.011-.957-.27-.098-.467-.147-.663.147-.196.294-.76.957-.932 1.153-.171.196-.343.22-.637.073-.294-.147-1.242-.458-2.365-1.462-.874-.78-1.464-1.744-1.636-2.038-.171-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.171.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.6-.909-2.19-.24-.575-.484-.497-.663-.506-.171-.008-.367-.01-.564-.01a1.08 1.08 0 0 0-.784.367c-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.055 2.846 1.202 3.043.147.196 2.077 3.17 5.032 4.445.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.085 1.741-.712 1.987-1.4.245-.688.245-1.278.171-1.4-.073-.122-.27-.196-.564-.343z"/></svg>
+              Falar no WhatsApp agora
+            </a>
+            <a href="#servicos" class="btn btn--ghost btn--lg">Ver categorias</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DIFERENCIAIS & SERVIÇOS ===================== -->
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">O que oferecemos</span>
+          <h2>Diferenciais &amp; Serviços</h2>
+          <p>Soluções completas para cada etapa da sua habilitação, do zero à renovação.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5" stroke="#2E3192" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="2.5" y="13" width="19" height="6" rx="1.5" stroke="#2E3192" stroke-width="1.6"/>
+                <circle cx="7" cy="19.5" r="1.4" fill="#2E3192"/>
+                <circle cx="17" cy="19.5" r="1.4" fill="#2E3192"/>
+              </svg>
+            </div>
+            <h3>1ª Habilitação <span>(Categorias A, B e AB)</span></h3>
+            <p>Nunca dirigiu antes? A gente começa do zero, com aulas teóricas e práticas nas categorias A, B ou AB.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="5" cy="17.5" r="2.4" stroke="#2E3192" stroke-width="1.6"/>
+                <circle cx="19" cy="17.5" r="2.4" stroke="#2E3192" stroke-width="1.6"/>
+                <path d="M7 17.5h4.5l1.8-4.2h4.2M13.3 13.3 11 9.8H7.6" stroke="#2E3192" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.5 9.8h2.3" stroke="#2E3192" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Adição de Categoria</h3>
+            <p>Já tem CNH de carro e quer andar de moto, ou o contrário? A gente adiciona a categoria que falta na sua carteira.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="8.5" stroke="#2E3192" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="2.5" stroke="#2E3192" stroke-width="1.7"/>
+                <path d="M12 4v5.3M7.2 16.8l3.6-3.2M16.8 16.8l-3.6-3.2" stroke="#2E3192" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Treinamento para Habilitados</h3>
+            <p>Tem CNH mas evita dirigir? Aulas práticas para perder o medo e ganhar confiança no trânsito.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2.5" y="5" width="19" height="14" rx="2" stroke="#2E3192" stroke-width="1.6"/>
+                <circle cx="8" cy="12" r="2.3" stroke="#2E3192" stroke-width="1.5"/>
+                <path d="M13 10h6M13 14h4.5" stroke="#2E3192" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Renovação de CNH</h3>
+            <p>CNH vencendo ou já vencida? A gente orienta cada etapa da renovação, sem deixar você perdido no processo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ALUNOS APROVADOS ===================== -->
+    <section class="approved" id="aprovados">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Nossos resultados</span>
+          <h2>Alunos Aprovados União</h2>
+          <p>Quem passou pela União e já está na estrada.</p>
+        </div>
+
+        <!--
+          GALERIA DE APROVADOS:
+          Cada .approved-card__photo é um placeholder circular pronto para receber a foto real.
+          Para inserir a foto, troque o <svg> interno por:
+          <img src="assets/img/alunos/aluno-01.jpg" alt="Nome do aluno aprovado" class="approved-card__photo-img">
+          (a classe já aplica object-fit: cover e preenche o círculo)
+          e ajuste nome/categoria/bairro e depoimento nos elementos abaixo.
+        -->
+        <div class="approved__grid">
+          <article class="approved-card">
+            <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="approved-card__quote">"Aprovei de primeira! O apoio dos instrutores fez toda a diferença."</p>
+            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
+            <span class="approved-card__meta">Categoria B &bull; Centro, Ribeirão das Neves</span>
+          </article>
+
+          <article class="approved-card">
+            <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="approved-card__quote">"Tinha muito medo de dirigir e hoje ando tranquilo(a). Recomendo demais!"</p>
+            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
+            <span class="approved-card__meta">Categoria A &bull; Justinópolis, Ribeirão das Neves</span>
+          </article>
+
+          <article class="approved-card">
+            <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="approved-card__quote">"Atendimento atencioso do início ao fim. Hoje tenho minha CNH em mãos."</p>
+            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
+            <span class="approved-card__meta">Categoria A/B &bull; Veneza, Ribeirão das Neves</span>
+          </article>
+
+          <article class="approved-card">
+            <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="approved-card__quote">"Processo de renovação super rápido e sem dor de cabeça."</p>
+            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
+            <span class="approved-card__meta">Renovação &bull; Sapucaia, Ribeirão das Neves</span>
+          </article>
+
+          <article class="approved-card">
+            <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="approved-card__quote">"Instrutores muito pacientes, me senti seguro(a) em cada aula."</p>
+            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
+            <span class="approved-card__meta">Categoria B &bull; Rosaneves, Ribeirão das Neves</span>
+          </article>
+
+          <article class="approved-card">
+            <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="approved-card__quote">"Melhor autoescola de Ribeirão das Neves, com certeza indico!"</p>
+            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
+            <span class="approved-card__meta">Adição de Categoria &bull; Novo Eldorado, Ribeirão das Neves</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PERGUNTAS FREQUENTES ===================== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Tire suas dúvidas</span>
+          <h2>Perguntas Frequentes</h2>
+          <p>O que quem procura CNH em Ribeirão das Neves mais pergunta antes de começar.</p>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq-item">
+            <summary>Quais documentos eu preciso para começar o processo de CNH?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>RG, CPF e comprovante de residência atualizado. Se for adição ou renovação, também a CNH atual. Menor de idade precisa de autorização dos responsáveis. Confirme a lista completa com a equipe pelo WhatsApp antes de ir até a unidade.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quais são as etapas da primeira habilitação?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Abertura do processo no Detran, exames de aptidão física e mental, exame psicotécnico, aulas teóricas, exame teórico, aulas práticas e exame prático.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como funcionam os exames médico e psicotécnico?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>São feitos em clínicas credenciadas pelo Detran, antes do início das aulas. Avaliam sua condição física, visual e psicológica para dirigir.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quanto tempo dura o curso teórico?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>A carga horária é definida pelo Detran-MG e é a mesma em qualquer autoescola.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como são as aulas práticas?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Individuais, com instrutor dentro do veículo, em horários combinados com você.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>O que acontece se eu reprovar no exame teórico ou prático?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Você pode refazer o exame. A equipe orienta sobre prazos e sobre o que revisar antes da nova tentativa.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso fazer carro e moto ao mesmo tempo?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Sim. É possível abrir o processo na categoria AB e seguir as duas habilitações juntas.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Já tenho CNH de carro. Como adiciono a categoria de moto?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>O processo de adição é mais simples que o de primeira habilitação. Fale com a equipe pelo WhatsApp para saber os próximos passos.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Minha CNH venceu. O que eu faço?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Existe um prazo após o vencimento para renovar. Quanto antes você iniciar o processo, melhor.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Tenho medo de dirigir. Isso é um problema?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Não. Existem aulas de treinamento voltadas para quem já tem CNH mas evita dirigir por insegurança.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Qual é o prazo médio do processo completo?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Depende da agenda do Detran para os exames e da sua disponibilidade para as aulas. A equipe passa uma estimativa atualizada quando o processo é aberto.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Preciso levar alguém comigo no exame prático?
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p>Não. Apenas você e o examinador do Detran acompanham o exame, junto com o instrutor quando exigido.</p>
+          </details>
+        </div>
+
+        <div class="faq__cta">
+          <p>Não achou sua dúvida aqui?</p>
+          <a
+            href="https://wa.me/553136252542"
+            data-wa-msg="Olá! Tenho uma dúvida que não vi no site. Pode me ajudar?"
+            class="btn btn--whatsapp btn--sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="icon-whatsapp" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.003 3C9.373 3 4 8.373 4 15.003c0 2.65.863 5.1 2.324 7.086L4.6 28.5l6.59-1.687a11.9 11.9 0 0 0 4.813 1.017h.004c6.63 0 12.003-5.373 12.003-12.003C28.01 8.373 22.637 3 16.003 3zm0 21.828a9.8 9.8 0 0 1-5.001-1.37l-.359-.213-3.912 1.002 1.045-3.815-.234-.392a9.79 9.79 0 0 1-1.5-5.237c0-5.42 4.411-9.83 9.833-9.83 5.42 0 9.83 4.41 9.83 9.83 0 5.421-4.41 9.83-9.702 9.825zm5.386-7.354c-.294-.147-1.741-.859-2.011-.957-.27-.098-.467-.147-.663.147-.196.294-.76.957-.932 1.153-.171.196-.343.22-.637.073-.294-.147-1.242-.458-2.365-1.462-.874-.78-1.464-1.744-1.636-2.038-.171-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.171.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.6-.909-2.19-.24-.575-.484-.497-.663-.506-.171-.008-.367-.01-.564-.01a1.08 1.08 0 0 0-.784.367c-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.055 2.846 1.202 3.043.147.196 2.077 3.17 5.032 4.445.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.085 1.741-.712 1.987-1.4.245-.688.245-1.278.171-1.4-.073-.122-.27-.196-.564-.343z"/></svg>
+            Falar com a equipe
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="cta-final">
+      <div class="container cta-final__inner">
+        <h2>Pronto para tirar sua CNH?</h2>
+        <p>Fale agora mesmo com a nossa equipe pelo WhatsApp e tire todas as suas dúvidas.</p>
+        <a
+          href="https://wa.me/553136252542"
+          data-wa-msg="Olá! Vim pelo site da Autoescola União Sevilha e quero tirar minha CNH."
+          class="btn btn--whatsapp btn--lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="icon-whatsapp" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.003 3C9.373 3 4 8.373 4 15.003c0 2.65.863 5.1 2.324 7.086L4.6 28.5l6.59-1.687a11.9 11.9 0 0 0 4.813 1.017h.004c6.63 0 12.003-5.373 12.003-12.003C28.01 8.373 22.637 3 16.003 3zm0 21.828a9.8 9.8 0 0 1-5.001-1.37l-.359-.213-3.912 1.002 1.045-3.815-.234-.392a9.79 9.79 0 0 1-1.5-5.237c0-5.42 4.411-9.83 9.833-9.83 5.42 0 9.83 4.41 9.83 9.83 0 5.421-4.41 9.83-9.702 9.825zm5.386-7.354c-.294-.147-1.741-.859-2.011-.957-.27-.098-.467-.147-.663.147-.196.294-.76.957-.932 1.153-.171.196-.343.22-.637.073-.294-.147-1.242-.458-2.365-1.462-.874-.78-1.464-1.744-1.636-2.038-.171-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.171.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.6-.909-2.19-.24-.575-.484-.497-.663-.506-.171-.008-.367-.01-.564-.01a1.08 1.08 0 0 0-.784.367c-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.055 2.846 1.202 3.043.147.196 2.077 3.17 5.032 4.445.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.085 1.741-.712 1.987-1.4.245-.688.245-1.278.171-1.4-.073-.122-.27-.196-.564-.343z"/></svg>
+          Quero minha CNH
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contato">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#hero" class="logo" aria-label="Autoescola União Sevilha - Início">
+          <span class="logo__plate">
+            <img src="assets/img/logo/logo-original.png" alt="Autoescola União Sevilha, Ribeirão das Neves MG" class="logo__image">
+          </span>
+        </a>
+        <p class="footer__about">
+          Autoescola União Sevilha. Ensino de direção em Ribeirão das Neves, no bairro Sevilha.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Endereço</h4>
+        <p>
+          Rua Monte Carmelo, 394<br>
+          Sevilha (2ª Seção) &ndash; Ribeirão das Neves/MG<br>
+          CEP 33858-080
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Horário de Atendimento</h4>
+        <p>
+          Segunda a Sexta: 07h às 20h<br>
+          Sábado: 08h às 12h<br>
+          Domingo: Fechado
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <p>
+          <a href="tel:+553136252542" class="footer__link">
+            Telefone: (31) 3625-2542
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://wa.me/553136252542"
+            data-wa-msg="Olá! Vim pelo rodapé do site da Autoescola União Sevilha e quero falar com vocês."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__link"
+          >
+            WhatsApp: (31) 3625-2542
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Autoescola União Sevilha. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== BOTÃO FLUTUANTE WHATSAPP ===================== -->
+  <a
+    href="https://wa.me/553136252542"
+    data-wa-msg="Olá! Vim pelo site da Autoescola União Sevilha e quero mais informações."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a Autoescola União Sevilha no WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16.003 3C9.373 3 4 8.373 4 15.003c0 2.65.863 5.1 2.324 7.086L4.6 28.5l6.59-1.687a11.9 11.9 0 0 0 4.813 1.017h.004c6.63 0 12.003-5.373 12.003-12.003C28.01 8.373 22.637 3 16.003 3zm0 21.828a9.8 9.8 0 0 1-5.001-1.37l-.359-.213-3.912 1.002 1.045-3.815-.234-.392a9.79 9.79 0 0 1-1.5-5.237c0-5.42 4.411-9.83 9.833-9.83 5.42 0 9.83 4.41 9.83 9.83 0 5.421-4.41 9.83-9.702 9.825zm5.386-7.354c-.294-.147-1.741-.859-2.011-.957-.27-.098-.467-.147-.663.147-.196.294-.76.957-.932 1.153-.171.196-.343.22-.637.073-.294-.147-1.242-.458-2.365-1.462-.874-.78-1.464-1.744-1.636-2.038-.171-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.171.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.6-.909-2.19-.24-.575-.484-.497-.663-.506-.171-.008-.367-.01-.564-.01a1.08 1.08 0 0 0-.784.367c-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.055 2.846 1.202 3.043.147.196 2.077 3.17 5.032 4.445.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.085 1.741-.712 1.987-1.4.245-.688.245-1.278.171-1.4-.073-.122-.27-.196-.564-.343z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

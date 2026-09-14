@@ -1,0 +1,682 @@
+/* ==========================================================================
+   Autoescola União Sevilha — Landing Page
+   Paleta oficial (11 tokens), declarada uma única vez abaixo. Qualquer ajuste
+   futuro de cor é feito aqui, em :root.
+   ========================================================================== */
+
+:root {
+  /* Fundo das seções de conteúdo (hero, serviços, depoimentos, FAQ). */
+  --color-base: #FFFFFF;
+  /* Tom antigo de --color-base, preservado só para os acentos decorativos
+     que não são seção nem card: ícone de serviço, foto de depoimento e
+     hover do botão ghost. Mantém a aparência que já tinham. */
+  --color-detalhe: #EFF2FB;
+  --color-navbar: #DFE5F5;      /* fundo exclusivo da barra de navegação */
+  --color-superficie: #FFFFFF;  /* logo (header/rodapé), badge, toggle mobile, botão ghost */
+  --color-card: #F7F9FD;        /* fundo exclusivo de card, caixa de FAQ e card de depoimento */
+  --color-card-borda: #E3E8F4;  /* borda exclusiva de card/caixa de FAQ/depoimento */
+  --color-marca: #2E3192;       /* títulos de destaque, rótulos, ícones, links */
+  --color-ancora: #1E2066;      /* fundo do rodapé e da faixa final de chamada */
+  --color-acao: #228535;        /* fundo de botão e de qualquer elemento clicável */
+  --color-acao-hover: #1B6E2B;  /* estado hover do botão */
+  --color-texto: #1A1B33;       /* corpo de texto */
+  --color-texto2: #55597A;      /* texto secundário */
+  --color-texto-inv: #FFFFFF;   /* texto sobre fundo escuro */
+  --color-texto-inv2: #B9BBE0;  /* texto secundário sobre fundo escuro */
+  --color-borda: #CED5EB;       /* hairline de card e divisória */
+
+  /* Exceção explícita: estrelas de avaliação mantidas como estavam. */
+  --color-star: #F59E0B;
+
+  --font-base: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-card: 16px;
+
+  /* Sombra neutra, derivada de texto (não é sombra colorida). */
+  --shadow-sm: 0 1px 2px rgba(26, 27, 51, 0.06);
+  --shadow-md: 0 8px 24px rgba(26, 27, 51, 0.08);
+
+  --container-w: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  color: var(--color-texto2);
+  background: var(--color-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-base);
+  color: var(--color-texto);
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+p { margin: 0; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+.text-accent { color: var(--color-marca); }
+
+/* ============================= BUTTONS ============================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn--sm { padding: 9px 16px; font-size: 0.875rem; }
+.btn--lg { padding: 15px 28px; font-size: 1rem; }
+
+/* Verde exclusivo do WhatsApp. */
+.btn--whatsapp {
+  background: var(--color-acao);
+  color: var(--color-texto-inv);
+  box-shadow: var(--shadow-sm);
+}
+.btn--whatsapp:hover {
+  background: var(--color-acao-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Botão secundário: fundo superfície, borda hairline, texto de corpo. */
+.btn--ghost {
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  border-color: var(--color-borda);
+}
+.btn--ghost:hover {
+  border-color: var(--color-marca);
+  background: var(--color-detalhe);
+}
+
+/* ============================= HEADER ============================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-navbar);
+  border-bottom: 1px solid var(--color-borda);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Logo 100% original: sem filtro, sem recolorir, sem recorte. O retângulo
+   branco atrás (regra 5) é cor de fundo do elemento existente, não edição
+   da imagem — mesmo arquivo, mesmo tamanho, mesma posição. */
+.header .logo {
+  background: var(--color-superficie);
+  border-radius: var(--radius-sm);
+}
+
+.logo__image {
+  height: 56px;
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* No rodapé, a mesma lógica: plaquinha branca por trás, raio idêntico. */
+.logo__plate {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-superficie);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+}
+.logo__plate .logo__image { height: 44px; max-height: 44px; }
+
+.header__phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-marca);
+  transition: opacity 0.15s ease;
+}
+.header__phone:hover { opacity: 0.75; }
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-marca);
+  transition: opacity 0.15s ease;
+  position: relative;
+}
+
+.nav__link:hover { opacity: 0.75; }
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-borda);
+  background: var(--color-superficie);
+  cursor: pointer;
+}
+.nav__toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--color-marca);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ============================= HERO ============================= */
+
+.hero {
+  padding-block: 120px 110px;
+  background: var(--color-base);
+}
+
+.hero__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__content {
+  max-width: 780px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borda);
+  color: var(--color-marca);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 5vw, 3.75rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  color: var(--color-texto);
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  color: var(--color-texto2);
+  max-width: 560px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* ============================= SECTION HEADING ============================= */
+
+.section-heading {
+  max-width: 620px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--color-marca);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--color-texto2);
+  font-size: 1.05rem;
+}
+
+/* ============================= SERVICES ============================= */
+
+.services {
+  padding-block: 88px;
+  background: var(--color-base);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Seção é base, card é card — nunca a mesma cor (regra 1). */
+.service-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-borda);
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-marca);
+}
+
+/* Ícone: marca sobre um círculo no tom base, para se destacar do card branco. */
+.service-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-detalhe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.service-card h3 span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-texto2);
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  color: var(--color-texto2);
+}
+
+/* ============================= APPROVED / GALLERY ============================= */
+
+.approved {
+  padding-block: 88px;
+  background: var(--color-base);
+}
+
+.approved__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.approved-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-borda);
+  border-radius: var(--radius-card);
+  padding: 26px 22px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.approved-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-marca);
+}
+
+.approved-card__photo {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--color-detalhe);
+  border: 1.5px dashed var(--color-borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Aplicada automaticamente quando o placeholder svg for trocado por <img class="approved-card__photo-img"> */
+.approved-card__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estrelas: mantidas como estavam, por instrução explícita. */
+.approved-card__stars {
+  color: var(--color-star);
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.approved-card__quote {
+  font-size: 0.94rem;
+  color: var(--color-texto2);
+  margin-bottom: 14px;
+  min-height: 66px;
+}
+
+.approved-card__name {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+.approved-card__meta {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-texto2);
+}
+
+/* ============================= FAQ ============================= */
+
+.faq {
+  padding-block: 88px;
+  background: var(--color-base);
+}
+
+.faq__list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-borda);
+  border-radius: var(--radius-card);
+  padding: 4px 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding-block: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--color-texto);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item__chevron {
+  flex-shrink: 0;
+  color: var(--color-texto2);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] .faq-item__chevron { transform: rotate(180deg); }
+
+.faq-item p {
+  font-size: 0.92rem;
+  color: var(--color-texto2);
+  padding-bottom: 20px;
+  max-width: 66ch;
+}
+
+.faq__cta {
+  max-width: 760px;
+  margin: 36px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.faq__cta p {
+  font-weight: 600;
+  color: var(--color-texto2);
+}
+
+/* ============================= CTA FINAL ============================= */
+/* Faixa final: permanece em âncora, junto do rodapé. */
+
+.cta-final {
+  background: var(--color-ancora);
+  padding-block: 80px;
+}
+
+.cta-final__inner {
+  text-align: center;
+  max-width: 560px;
+}
+
+.cta-final h2 {
+  color: var(--color-texto-inv);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 12px;
+}
+
+.cta-final p {
+  color: var(--color-texto-inv2);
+  margin-bottom: 28px;
+  font-size: 1.02rem;
+}
+
+/* ============================= FOOTER ============================= */
+/* Rodapé: permanece em âncora. */
+
+.footer {
+  background: var(--color-ancora);
+  color: var(--color-texto-inv2);
+  padding-top: 64px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.footer__about {
+  margin-top: 16px;
+  font-size: 0.92rem;
+  color: var(--color-texto-inv2);
+  max-width: 260px;
+}
+
+.footer h4 {
+  color: var(--color-texto-inv);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: var(--color-texto-inv2);
+  margin-bottom: 14px;
+}
+
+.footer__link {
+  color: var(--color-texto-inv);
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+/* Sem verde (exclusivo do WhatsApp) e sem marca (sem contraste sobre a
+   âncora): hover troca para o texto secundário claro, já da paleta. */
+.footer__link:hover { color: var(--color-texto-inv2); }
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-block: 20px;
+  text-align: center;
+}
+
+.footer__bottom p {
+  font-size: 0.82rem;
+  color: var(--color-texto-inv2);
+  margin: 0;
+}
+
+/* ============================= WHATSAPP FLOAT ============================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--color-acao);
+  color: var(--color-texto-inv);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(34, 133, 53, 0.4);
+  z-index: 999;
+  animation: pulse-whatsapp 2.4s infinite;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.whatsapp-float:hover {
+  background: var(--color-acao-hover);
+  transform: scale(1.08);
+}
+
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(34, 133, 53, 0.45), 0 10px 24px rgba(34, 133, 53, 0.4); }
+  70% { box-shadow: 0 0 0 14px rgba(34, 133, 53, 0), 0 10px 24px rgba(34, 133, 53, 0.4); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 133, 53, 0), 0 10px 24px rgba(34, 133, 53, 0.4); }
+}
+
+/* ============================= RESPONSIVE ============================= */
+
+@media (max-width: 960px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .approved__grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 860px) {
+  .nav__toggle { display: flex; }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-navbar);
+    border-bottom: 1px solid var(--color-borda);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .nav.is-open { max-height: 320px; }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 24px 20px;
+  }
+  .nav__list li { width: 100%; }
+  .nav__link {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-borda);
+  }
+}
+
+/* Telefone fica sempre visível: em telas estreitas, as ações do cabeçalho
+   quebram para uma segunda linha em vez de esconder o número. */
+@media (max-width: 560px) {
+  .header__inner { flex-wrap: wrap; row-gap: 10px; }
+  .header__actions { width: 100%; justify-content: space-between; }
+}
+
+@media (max-width: 420px) {
+  .header__actions .btn--sm { padding-inline: 12px; }
+  .logo__image { height: 44px; max-height: 44px; }
+}
+
+@media (max-width: 640px) {
+  .services__grid { grid-template-columns: 1fr; }
+  .approved__grid { grid-template-columns: 1fr; }
+  .footer__inner { grid-template-columns: 1fr; }
+  .hero { padding-block: 72px 56px; }
+  .services, .approved, .faq { padding-block: 56px; }
+  .whatsapp-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+}
