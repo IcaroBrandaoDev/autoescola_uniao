@@ -16,6 +16,7 @@
   --color-card: #F7F9FD;        /* fundo exclusivo de card, caixa de FAQ e card de depoimento */
   --color-card-borda: #E3E8F4;  /* borda exclusiva de card/caixa de FAQ/depoimento */
   --color-marca: #2E3192;       /* títulos de destaque, rótulos, ícones, links */
+  --color-marca-hover: #272A7C; /* estado hover do botão azul (ex: Traçar Rota) */
   --color-ancora: #1E2066;      /* fundo do rodapé e da faixa final de chamada */
   --color-acao: #228535;        /* fundo de botão e de qualquer elemento clicável */
   --color-acao-hover: #1B6E2B;  /* estado hover do botão */
@@ -122,6 +123,18 @@ p { margin: 0; }
 .btn--ghost:hover {
   border-color: var(--color-marca);
   background: var(--color-detalhe);
+}
+
+/* Botão de destaque: fundo na cor principal da marca, texto branco (ex: Traçar Rota). */
+.btn--primary {
+  background: var(--color-marca);
+  color: var(--color-texto-inv);
+  box-shadow: var(--shadow-sm);
+}
+.btn--primary:hover {
+  background: var(--color-marca-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 /* ============================= HEADER ============================= */
@@ -418,6 +431,11 @@ p { margin: 0; }
   object-fit: cover;
 }
 
+/* Com foto real dentro, a borda tracejada de "placeholder vazio" vira sólida. */
+.approved-card__photo:has(.approved-card__photo-img) {
+  border-style: solid;
+}
+
 /* Estrelas: mantidas como estavam, por instrução explícita. */
 .approved-card__stars {
   color: var(--color-star);
@@ -558,26 +576,63 @@ p { margin: 0; }
   gap: 18px;
 }
 
+.location__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 .location__photo {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
 }
 
-.location__address,
-.location__hours {
+.location__photo:hover {
+  transform: scale(1.02);
+}
+
+/* Card único reunindo Endereço e Horário, no mesmo padrão visual dos
+   outros cards do site (card + faq-item + approved-card). */
+.location__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-card);
+  border: 1px solid var(--color-card-borda);
+  border-radius: var(--radius-card);
+  padding: 20px;
+}
+
+.location__item-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.location__icon {
+  flex-shrink: 0;
+  color: var(--color-marca);
+}
+
+.location__item-head strong {
+  color: var(--color-texto);
+  font-size: 1rem;
+}
+
+.location__item-text {
   font-size: 0.95rem;
   color: var(--color-texto2);
   line-height: 1.7;
 }
 
-.location__address strong,
-.location__hours strong {
-  display: block;
-  margin-bottom: 4px;
+.location__item-text strong {
   color: var(--color-texto);
-  font-size: 1rem;
+  font-weight: 700;
 }
 
 .location__map {
@@ -823,11 +878,16 @@ p { margin: 0; }
   }
 }
 
-/* Onde Estamos: informações e mapa empilham em 1 coluna no mobile. */
+/* Onde Estamos: informações e mapa empilham em 1 coluna no mobile,
+   e as duas fotos da fachada empilham junto (eram lado a lado). */
 @media (max-width: 768px) {
   .location__grid {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .location__photos {
+    grid-template-columns: 1fr;
   }
 }
 
