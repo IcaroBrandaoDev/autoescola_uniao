@@ -340,29 +340,6 @@ p { margin: 0; }
   font-size: 1.05rem;
 }
 
-/* ============================= SECTION DIVIDERS (ONDAS) ============================= */
-/* Primeiro filho da seção que "puxa" a onda pra cima com margem negativa,
-   sobrepondo a base da seção anterior. A cor da onda é a cor da própria
-   seção (via currentColor) — a ilusão é a nova cor "invadindo" a anterior. */
-
-.section-wave {
-  display: block;
-  width: 100%;
-  height: 80px;
-  margin-top: -79px;
-  pointer-events: none;
-  line-height: 0;
-}
-
-.section-wave svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.section-wave--depoimentos { color: var(--color-ancora); }
-.section-wave--localizacao { color: var(--color-base); }
-
 /* ============================= SERVICES ============================= */
 
 .services {
@@ -830,10 +807,6 @@ p { margin: 0; }
   }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .topbar__item--right { display: none; }
-  .section-wave {
-    height: 40px;
-    margin-top: -39px;
-  }
 }
 
 /* Navbar mobile: cabeçalho fixo, 100% opaco (sem degradê nem backdrop-filter,
