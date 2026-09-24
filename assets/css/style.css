@@ -276,7 +276,7 @@ p { margin: 0; }
 }
 
 .hero__content {
-  max-width: 960px;
+  max-width: 896px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -302,6 +302,9 @@ p { margin: 0; }
   letter-spacing: -0.01em;
   margin-bottom: 24px;
   color: var(--color-texto);
+  /* Deixa o navegador escolher onde quebrar a linha, evitando uma palavra
+     isolada sozinha na última linha. Sem suporte, cai no quebra normal. */
+  text-wrap: balance;
 }
 
 .hero__subtitle {
@@ -337,11 +340,35 @@ p { margin: 0; }
   font-size: 1.05rem;
 }
 
+/* ============================= SECTION DIVIDERS (ONDAS) ============================= */
+/* Primeiro filho da seção que "puxa" a onda pra cima com margem negativa,
+   sobrepondo a base da seção anterior. A cor da onda é a cor da própria
+   seção (via currentColor) — a ilusão é a nova cor "invadindo" a anterior. */
+
+.section-wave {
+  display: block;
+  width: 100%;
+  height: 80px;
+  margin-top: -79px;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.section-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.section-wave--depoimentos { color: var(--color-ancora); }
+.section-wave--faq { color: var(--color-detalhe); }
+
 /* ============================= SERVICES ============================= */
 
 .services {
   padding-block: 88px;
-  background: var(--color-base);
+  /* Contraste imediato com o hero branco logo acima. */
+  background: var(--color-detalhe);
 }
 
 .services__grid {
@@ -396,15 +423,30 @@ p { margin: 0; }
 
 /* ============================= APPROVED / GALLERY ============================= */
 
+/* Faixa escura para dar peso de prova social — mesmo azul-marinho
+   institucional do rodapé/CTA final (var(--color-ancora)), não uma cor nova. */
 .approved {
   padding-block: 88px;
-  background: var(--color-base);
+  background: var(--color-ancora);
+}
+
+.approved .section-heading h2 {
+  color: var(--color-texto-inv);
+}
+
+.approved .section-heading p {
+  color: var(--color-texto-inv2);
 }
 
 .approved__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  /* Cards "flutuando": puxa a grade pra cima, mais perto do divisor no
+     topo da seção. Volta a 0 no mobile (ver RESPONSIVE). */
+  margin-top: -40px;
+  position: relative;
+  z-index: 1;
 }
 
 .approved-card {
@@ -482,7 +524,8 @@ p { margin: 0; }
 
 .faq {
   padding-block: 88px;
-  background: var(--color-base);
+  /* Mesmo tom azul-gelo do Serviços — dá contraste pros cards do accordion. */
+  background: var(--color-detalhe);
 }
 
 .faq__list {
@@ -543,35 +586,10 @@ p { margin: 0; }
   color: var(--color-texto2);
 }
 
-/* ============================= CTA FINAL ============================= */
-/* Faixa final: permanece em âncora, junto do rodapé. */
-
-.cta-final {
-  background: var(--color-ancora);
-  padding-block: 80px;
-}
-
-.cta-final__inner {
-  text-align: center;
-  max-width: 560px;
-}
-
-.cta-final h2 {
-  color: var(--color-texto-inv);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 12px;
-}
-
-.cta-final p {
-  color: var(--color-texto-inv2);
-  margin-bottom: 28px;
-  font-size: 1.02rem;
-}
-
 /* ============================= ONDE ESTAMOS ============================= */
 
 .location {
-  padding-block: 88px;
+  padding-block: 96px;
   background: var(--color-base);
 }
 
@@ -579,7 +597,7 @@ p { margin: 0; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
 }
 
 .location__info {
@@ -659,12 +677,42 @@ p { margin: 0; }
   border-radius: 12px;
 }
 
+/* ============================= CTA FINAL (MINI-TRANSIÇÃO) ============================= */
+/* Faixa própria em tom azul-gelo — ponte entre o branco do Mapa e o azul
+   escuro do rodapé. Sem sobreposição: fica inteira na sua própria seção. */
+
+.cta-final {
+  padding-block: 64px;
+  background: var(--color-detalhe);
+}
+
+.cta-card {
+  max-width: 896px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-card h2 {
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  color: var(--color-texto);
+  margin-bottom: 14px;
+}
+
+.cta-card p {
+  color: var(--color-texto2);
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 1.02rem;
+}
+
 /* ============================= FOOTER ============================= */
 /* Rodapé: permanece em âncora. */
 
 .footer {
   background: var(--color-ancora);
   color: var(--color-texto-inv2);
+  /* Borda discreta: fecha a mini-transição azul-gelo antes do fundo escuro. */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 64px;
 }
 
@@ -672,7 +720,7 @@ p { margin: 0; }
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 32px;
-  padding-bottom: 40px;
+  padding-bottom: 64px;
 }
 
 .footer__about {
@@ -772,9 +820,16 @@ p { margin: 0; }
 
 @media (max-width: 960px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
-  .approved__grid { grid-template-columns: repeat(2, 1fr); }
+  .approved__grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+  }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .topbar__item--right { display: none; }
+  .section-wave {
+    height: 40px;
+    margin-top: -39px;
+  }
 }
 
 /* Navbar mobile: cabeçalho fixo, 100% opaco (sem degradê nem backdrop-filter,
@@ -922,6 +977,7 @@ p { margin: 0; }
   .footer__inner { grid-template-columns: 1fr; }
   .hero { padding-block: 72px 56px; }
   .services, .approved, .faq { padding-block: 56px; }
-  .location { padding-block: 56px; }
+  .location { padding-block: 64px; }
   .whatsapp-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  .cta-final { padding-block: 48px; }
 }
