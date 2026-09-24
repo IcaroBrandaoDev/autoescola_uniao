@@ -114,6 +114,20 @@ p { margin: 0; }
   box-shadow: var(--shadow-md);
 }
 
+/* Verde sólido reservado só pros 3 CTAs de maior peso (hero, card de
+   fechamento e botão flutuante). Em apoios secundários (fim do FAQ etc.),
+   a mesma ação de WhatsApp usa este contorno mais discreto. */
+.btn--whatsapp-outline {
+  background: var(--color-superficie);
+  color: var(--color-acao);
+  border-color: var(--color-acao);
+}
+.btn--whatsapp-outline:hover {
+  background: var(--color-detalhe);
+  border-color: var(--color-acao-hover);
+  color: var(--color-acao-hover);
+}
+
 /* Botão secundário: fundo superfície, borda hairline, texto de corpo. */
 .btn--ghost {
   background: var(--color-superficie);
@@ -210,14 +224,6 @@ p { margin: 0; }
   padding: 8px 14px;
 }
 .logo__plate .logo__image { height: 44px; max-height: 44px; }
-
-.header__location {
-  display: none;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--color-texto2);
-  white-space: nowrap;
-}
 
 .nav__list {
   display: flex;
@@ -840,17 +846,9 @@ p { margin: 0; }
     max-height: 34px;
   }
 
-  .header__location {
-    display: inline-flex;
-  }
-
+  /* Só logo e hambúrguer no mobile — o botão flutuante já cobre o WhatsApp. */
   .header__actions .btn--whatsapp {
-    width: 38px;
-    height: 38px;
-    padding: 0;
-    gap: 0;
-    border-radius: 50%;
-    font-size: 0;
+    display: none;
   }
 
   .nav__toggle {
