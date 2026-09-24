@@ -529,6 +529,7 @@ p { margin: 0; }
   /* Branco puro: quebra o bloco azul-gelo contínuo que vinha de Serviços.
      Os cards do accordion (var(--color-card)) continuam se destacando. */
   background: var(--color-base);
+  border-top: 1px solid var(--color-card-borda);
 }
 
 .faq__list {
