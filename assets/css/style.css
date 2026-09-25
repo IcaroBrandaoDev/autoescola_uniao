@@ -444,6 +444,13 @@ p { margin: 0; }
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  /* Card preenche 100% da altura da linha do grid (que já estica por
+     padrão) e organiza o conteúdo em coluna, pra o rodapé (nome/local)
+     poder ser cravado embaixo com margin-top:auto — não importa quão
+     curto ou longo seja o texto do depoimento. */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .approved-card:hover {
@@ -488,8 +495,14 @@ p { margin: 0; }
 .approved-card__quote {
   font-size: 0.94rem;
   color: var(--color-texto2);
-  margin-bottom: 14px;
-  min-height: 66px;
+}
+
+/* Nome + local sempre cravados no final do card, alinhados entre si na
+   mesma linha horizontal em toda a grade, seja qual for o tamanho da
+   citação acima. */
+.approved-card__footer {
+  margin-top: auto;
+  padding-top: 16px;
 }
 
 .approved-card__name {
