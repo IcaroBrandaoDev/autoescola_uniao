@@ -116,17 +116,18 @@ p { margin: 0; }
 
 /* Verde sólido reservado só pros 3 CTAs de maior peso (hero, card de
    fechamento e botão flutuante). Em apoios secundários (fim do FAQ etc.),
-   a mesma ação de WhatsApp usa o azul institucional da marca, não verde,
-   pra não saturar a tela de verde. */
+   a mesma ação de WhatsApp usa este contorno verde mais discreto. */
 .btn--whatsapp-outline {
   background: var(--color-superficie);
-  color: var(--color-marca);
-  border-color: var(--color-marca);
+  color: #27A844;
+  border-color: #27A844;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
-.btn--whatsapp-outline:hover {
+.btn--whatsapp-outline:hover,
+.btn--whatsapp-outline:focus-visible {
   background: var(--color-detalhe);
-  border-color: var(--color-marca-hover);
-  color: var(--color-marca-hover);
+  border-color: #1F8A37;
+  color: #1F8A37;
 }
 
 /* Botão secundário: fundo superfície, borda hairline, texto de corpo. */
