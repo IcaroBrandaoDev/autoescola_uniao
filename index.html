@@ -15,7 +15,6 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- JSON-LD: dados estruturados da autoescola para SEO local -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,11 +54,9 @@
     }
   }
   </script>
-  <!-- "url" e "image" ficam de fora até o domínio final do site ser definido -->
 </head>
 <body>
 
-  <!-- ===================== BARRA INSTITUCIONAL ===================== -->
   <div class="topbar" id="topbar">
     <div class="container topbar__inner">
       <span class="topbar__item">
@@ -71,8 +68,6 @@
     </div>
   </div>
 
-  <!-- ===================== HEADER / NAVBAR ===================== -->
-  <!-- Número de WhatsApp centralizado em assets/js/main.js (WHATSAPP_NUMBER). Os hrefs abaixo são fallback para navegação sem JS. -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="logo" aria-label="Autoescola União Sevilha - Início">
@@ -106,7 +101,7 @@
   </header>
 
   <main>
-    <!-- ===================== HERO ===================== -->
+
     <section class="hero" id="hero">
       <div class="container hero__inner">
         <div class="hero__content">
@@ -134,7 +129,6 @@
       </div>
     </section>
 
-    <!-- ===================== DIFERENCIAIS & SERVIÇOS ===================== -->
     <section class="services" id="servicos">
       <div class="container">
         <div class="section-heading">
@@ -196,7 +190,6 @@
       </div>
     </section>
 
-    <!-- ===================== PERGUNTAS FREQUENTES ===================== -->
     <section class="faq" id="faq">
       <div class="container">
         <div class="section-heading">
@@ -306,7 +299,6 @@
       </div>
     </section>
 
-    <!-- ===================== ALUNOS APROVADOS ===================== -->
     <section class="approved" id="aprovados">
       <div class="container">
         <div class="section-heading">
@@ -314,14 +306,6 @@
           <p>Quem passou pela União e já está na estrada.</p>
         </div>
 
-        <!--
-          GALERIA DE APROVADOS:
-          Cada .approved-card__photo é um placeholder circular pronto para receber a foto real.
-          Para inserir a foto, troque o <svg> interno por:
-          <img src="assets/img/alunos/aluno-01.jpg" alt="Nome do aluno aprovado" class="approved-card__photo-img">
-          (a classe já aplica object-fit: cover e preenche o círculo)
-          e ajuste nome/categoria/bairro e depoimento nos elementos abaixo.
-        -->
         <div class="approved__grid">
           <article class="approved-card">
             <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
@@ -365,12 +349,12 @@
 
           <article class="approved-card">
             <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#55597A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#55597A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <img src="assets/img/alunos/ana clara autoescola.png" alt="Ana Clara, aluna aprovada" class="approved-card__photo-img">
             </div>
             <div class="approved-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-            <p class="approved-card__quote">"Instrutores muito pacientes, me senti seguro(a) em cada aula."</p>
-            <span class="approved-card__name">Aluno(a) Aprovado(a)</span>
-            <span class="approved-card__meta">Categoria B &bull; Rosaneves, Ribeirão das Neves</span>
+            <p class="approved-card__quote">"Ótima autoescola, fiz minhas aulas com o instrutor Anderson, sempre teve muita paciência comigo e me ajudou muito quando eu ficava nervosa, hoje felizmente já estou com minha cnh mas penso em voltar e tirar a de moto com eles também."</p>
+            <span class="approved-card__name">Ana Clara</span>
+            <span class="approved-card__meta">Aluna Aprovada &bull; Ribeirão das Neves</span>
           </article>
 
           <article class="approved-card">
@@ -386,7 +370,6 @@
       </div>
     </section>
 
-    <!-- ===================== ONDE ESTAMOS ===================== -->
     <section class="location" id="onde-estamos">
       <div class="container">
         <div class="section-heading">
@@ -456,7 +439,6 @@
       </div>
     </section>
 
-    <!-- ===================== CTA FINAL (MINI-TRANSIÇÃO) ===================== -->
     <section class="cta-final">
       <div class="container">
         <div class="cta-card">
@@ -477,7 +459,6 @@
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="footer" id="contato">
     <div class="container footer__inner">
       <div class="footer__col">
@@ -548,7 +529,7 @@
     </div>
   </footer>
 
-  <!-- ===================== BOTÃO FLUTUANTE WHATSAPP ===================== -->
+
   <a
     href="https://wa.me/553136252542"
     data-wa-msg="Olá! Vim pelo site da Autoescola União Sevilha e quero mais informações."

@@ -1,5 +1,3 @@
-// Número de WhatsApp centralizado: troque só aqui para atualizar todos os botões do site.
-// Ainda não confirmado como WhatsApp Business oficial (hoje é o telefone fixo da unidade).
 const WHATSAPP_NUMBER = '553136252542';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,13 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Links de WhatsApp: monta a URL final a partir da constante WHATSAPP_NUMBER
-  // e da mensagem específica de cada botão (data-wa-msg).
   document.querySelectorAll('[data-wa-msg]').forEach((el) => {
     el.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(el.dataset.waMsg)}`;
   });
 
-  // Sanfona do FAQ: mantém só uma pergunta aberta por vez
   document.querySelectorAll('.faq-item').forEach((item) => {
     item.addEventListener('toggle', () => {
       if (item.open) {
@@ -38,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Ano dinâmico no rodapé
+
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
