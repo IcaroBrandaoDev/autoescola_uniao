@@ -2,10 +2,6 @@
 
 Site institucional da Autoescola União Sevilha, centro de formação de condutores localizado no bairro Sevilha (2ª Seção), em Ribeirão das Neves, Minas Gerais.
 
-**Acesse:** [icarobrandaodev.github.io/autoescola_uniao](https://icarobrandaodev.github.io/autoescola_uniao/)
-
-> Projeto em fase de protótipo. Parte do conteúdo, como os depoimentos, ainda é ilustrativa e será substituída por material real.
-
 ## Sobre o projeto
 
 Landing page de página única criada para apresentar os serviços da autoescola, responder as dúvidas mais comuns sobre o processo de habilitação e levar o visitante até o atendimento pelo WhatsApp.
