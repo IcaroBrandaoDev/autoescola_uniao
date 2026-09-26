@@ -306,7 +306,8 @@
           <p>Quem passou pela União e já está na estrada.</p>
         </div>
 
-        <div class="approved__grid">
+        <div class="approved__carousel">
+        <div class="approved__grid" id="approvedGrid">
           <article class="approved-card">
             <div class="approved-card__photo" aria-label="Foto do aluno aprovado">
               <img src="assets/img/alunos/enzo autoescola.png" alt="Enzo, aluno aprovado" class="approved-card__photo-img">
@@ -378,6 +379,16 @@
               <span class="approved-card__meta">Adição de Categoria &bull; Novo Eldorado, Ribeirão das Neves</span>
             </div>
           </article>
+        </div>
+
+          <button type="button" class="approved__arrow approved__arrow--prev" id="approvedPrev" aria-label="Depoimento anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="approved__arrow approved__arrow--next" id="approvedNext" aria-label="Próximo depoimento">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="approved__dots" id="approvedDots" role="tablist" aria-label="Selecionar depoimento"></div>
         </div>
       </div>
     </section>
