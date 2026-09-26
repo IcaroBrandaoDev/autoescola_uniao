@@ -457,19 +457,15 @@ p { margin: 0; }
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  /* Altura mínima uniforme: sem isso, o grid só estica os cards dentro da
-     MESMA linha (a linha 2 pode ficar mais baixa que a 1), e no carrossel
-     do mobile cada card é seu próprio item, sem "linha" pra igualar contra.
-     Com min-height fixo, todo card fica do mesmo tamanho em qualquer
-     contexto — o texto mais longo é quem manda, os outros só sobram vazio. */
-  min-height: 460px;
-  /* Card preenche 100% da altura da linha do grid (que já estica por
-     padrão) e organiza o conteúdo em coluna, pra o rodapé (nome/local)
-     poder ser cravado embaixo com margin-top:auto — não importa quão
-     curto ou longo seja o texto do depoimento. */
+  /* Altura fixa (não só mínima): todo card, em qualquer contexto — linha
+     do grid no desktop ou item isolado no carrossel do mobile — fica
+     exatamente do mesmo tamanho. 520px dá folga real pro maior depoimento
+     caber sem cortar; overflow:hidden aqui é só rede de segurança pras
+     bordas arredondadas, o scroll de verdade fica por conta da citação. */
+  height: 520px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .approved-card:hover {
@@ -511,7 +507,17 @@ p { margin: 0; }
   margin-bottom: 12px;
 }
 
+/* Ocupa todo o espaço que sobra entre as estrelas e o rodapé, e centraliza
+   o texto dentro dele — funciona igual com uma frase curta ou um parágrafo
+   inteiro, sem depender da quantidade de linhas. */
 .approved-card__quote {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding-inline: 8px;
   font-size: 0.94rem;
   color: var(--color-texto2);
 }
@@ -522,6 +528,7 @@ p { margin: 0; }
 .approved-card__footer {
   margin-top: auto;
   padding-top: 16px;
+  border-top: 1px solid var(--color-borda);
 }
 
 .approved-card__name {
@@ -983,20 +990,25 @@ p { margin: 0; }
 @media (max-width: 768px) {
   .approved__grid {
     display: flex;
-    gap: 0;
+    gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     margin-top: 0;
+    padding-block: 8px;
     scrollbar-width: none;
   }
   .approved__grid::-webkit-scrollbar {
     display: none;
   }
 
+  /* 85vw (até 340px): deixa uma tira do próximo card espiando na lateral,
+     como sinal visual de que dá pra continuar deslizando. */
   .approved-card {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 85vw;
+    width: 85vw;
+    max-width: 340px;
     scroll-snap-align: center;
   }
 
